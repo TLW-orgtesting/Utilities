@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: pre-build documentation
-        uses: TLW-orgtesting/ci-config@v1.002
+        uses: TLW-orgtesting/ci-config/action2@v1.007
       - name: Build documentation
         env:
           cmake_version: ${{ matrix.cmake_version }}
