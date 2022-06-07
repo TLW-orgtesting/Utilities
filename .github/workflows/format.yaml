@@ -8,5 +8,4 @@ jobs:
   build:
     uses: TLW-orgtesting/ci-config/.github/workflows/format_tmpl.yml@main
     with: 
-      source: ./utilities  
-    
+      source: ./utilities
