@@ -11,4 +11,4 @@ jobs:
   Build-Documentation:
     uses: TLW-orgtesting/ci-config/.github/workflows/c-cpp_tmpl.yml@main
     with: 
-      reponame_cxx_api: 'gcc gcovr cmake'
+      get_dependencies_params: 'gcc gcovr cmake'
