@@ -7,19 +7,6 @@ on:
 
 jobs:
   Build-Documentation:
-    runs-on: ubuntu-latest
-    env:
-      cmake_version: 3.16.3
-      arch: Linux-x86_64
-    steps:
-      - name: Obtain Source and Get Dependencies
-        uses: TLW-orgtesting/ci-config/action2@v1.007
-      - name: Build documentation
-        run: .github/workflows/scripts/build_docs.sh utilities_cxx_api
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.CREATE_PULL_REQUEST_TOKEN }}
-          publish_dir: ./docs/build/html
-
-
+    uses: TLW-orgtesting/ci-config/.github/workflows/deploy_docs_tmpl.yml@main
+    with: 
+      reponame_cxx_api: utilities_cxx_api
